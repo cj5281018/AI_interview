@@ -215,8 +215,8 @@ def _render_sidebar_config(storage: InterviewStorage, available_providers: list)
         # 上传新简历
         with st.expander("📤 上传新简历"):
             uploaded = st.file_uploader(
-                "支持 PDF/DOCX/TXT",
-                type=["pdf", "docx", "txt", "md"],
+                "支持 PDF/DOCX/TXT/MD/图片",
+                type=["pdf", "docx", "txt", "md", "jpg", "jpeg", "png", "bmp", "webp"],
                 key="quick_resume_upload",
                 label_visibility="collapsed",
             )

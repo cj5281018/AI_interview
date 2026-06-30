@@ -12,14 +12,14 @@
       <div class="section-head">
         <span class="step-num">01</span>
         <h2>上传简历</h2>
-        <span class="hint">支持 PDF / Word / TXT / Markdown</span>
+        <span class="hint">支持 PDF / Word / TXT / Markdown / 图片</span>
       </div>
 
       <div v-if="!resumeText" class="upload-zone" @click="$refs.fileInput.click()" @dragover.prevent @drop.prevent="handleDrop">
-        <input ref="fileInput" type="file" accept=".pdf,.docx,.doc,.txt,.md" hidden @change="handleFile" />
+        <input ref="fileInput" type="file" accept=".pdf,.docx,.doc,.txt,.md,.jpg,.jpeg,.png,.bmp,.webp" hidden @change="handleFile" />
         <div class="upload-icon">📄</div>
         <p class="upload-title">{{ uploading ? '解析中...' : '点击或拖拽上传简历' }}</p>
-        <p class="upload-hint">PDF, Word (.docx), TXT, Markdown (.md)</p>
+        <p class="upload-hint">PDF, Word (.docx), TXT, Markdown (.md), 图片 (JPG/PNG/BMP/WEBP)</p>
         <p v-if="uploadError" class="upload-error">{{ uploadError }}</p>
       </div>
 

@@ -17,8 +17,8 @@ def render(storage: InterviewStorage):
     # ── 上传简历 ──
     st.subheader("📤 上传新简历")
     uploaded_file = st.file_uploader(
-        "支持 PDF、Word（.docx）、TXT 格式",
-        type=["pdf", "docx", "txt", "md"],
+        "支持 PDF、Word、TXT、Markdown、图片（JPG/PNG/BMP/WEBP）",
+        type=["pdf", "docx", "txt", "md", "jpg", "jpeg", "png", "bmp", "webp"],
         key="resume_uploader",
     )
 
