@@ -1,32 +1,31 @@
 # =========================
-# ProView AI Interviewer - Simplified Version
+# AI 在线面试官
 # Python 3.10+
 # =========================
 
-# Web UI
-streamlit>=1.28.0
-
-# Backend API
+# ── 后端 API ──
 flask>=3.0.0
 flask-cors>=4.0.0
+python-multipart>=0.0.32
 
-# LLM Client (OpenAI-compatible)
+# ── LLM 客户端（OpenAI 兼容协议）──
 openai>=1.6.0
 
-# Environment management
+# ── 环境变量管理 ──
 python-dotenv>=1.0.0
 
-# Resume parsing (required)
+# ── 简历解析（必装）──
 PyPDF2>=3.0.0
 python-docx>=1.0.0
 Pillow>=10.0.0
 
-# Resume parsing (optional, for better extraction quality)
-PyMuPDF>=1.23.0      # 比 PyPDF2 提取质量更好
-easyocr>=1.7.0        # 本地 OCR，支持图片和扫描版 PDF
+# ── 简历解析（可选，提升提取质量）──
+PyMuPDF>=1.23.0       # PDF 文本提取质量优于 PyPDF2
+easyocr>=1.7.0         # 本地 OCR 引擎（离线可用）
+pillow-heif>=1.3.0     # iPhone HEIC 照片兼容
 
-# Database
-# SQLite is built-in (no extra package needed)
+# ── 前端（Streamlit 版）──
+streamlit>=1.28.0
 
-# Utilities
+# ── 工具 ──
 requests>=2.31.0
